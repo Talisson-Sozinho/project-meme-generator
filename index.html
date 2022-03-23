@@ -8,14 +8,14 @@
     <title>Meme Generator</title>
   </head>
   <body>
-    <div id="meme-image-container">
-      <p id="meme-text"></p>
-      <img id='meme-image' src="#" alt="" />
+    <div id="input-container">
+      <input id='meme-insert' type="file" />
+      <input id="text-input" type="text" minlength ='0' maxlength="60" />
     </div>
-
-    <input id='meme-insert' type="file" />
-    <input id="text-input" type="text" />
-
+    <div id="meme-image-container">
+      <p id="meme-text" ></p>
+      <img id='meme-image' src="#" />
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

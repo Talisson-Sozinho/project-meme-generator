@@ -4,9 +4,7 @@ const textImage = document.getElementById('meme-text');
 // const imageContainer = document.getElementById('meme-image-container');
 
 inputText.addEventListener('input', (event) => {
-  console.log(event.target.value);
-  console.log(textImage.innerHTML);
-  textImage.innerHTML = event.target.value;
+  textImage.innerText = event.target.value;
 });
 
 inputMemeImage.addEventListener('input', (event) => {
