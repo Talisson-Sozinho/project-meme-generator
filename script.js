@@ -2,52 +2,46 @@ const inputMemeImage = document.getElementById('meme-insert');
 const inputText = document.getElementById('text-input');
 const textImage = document.getElementById('meme-text');
 const imageContainer = document.getElementById('meme-image-container');
-const fireButton = document.getElementById('fire');
-const waterButton = document.getElementById('water');
-const earthButton = document.getElementById('earth');
-const meme1 = document.getElementById('meme-1');
-const meme2 = document.getElementById('meme-2');
-const meme3 = document.getElementById('meme-3');
-const meme4 = document.getElementById('meme-4');
+const newImage = document.getElementById('meme-image');
+const buttonContainer = document.getElementById('button-container');
+const imagesContainer = document.getElementById('memes-options-container');
 
-inputText.addEventListener('input', (event) => {
+function addTextOnImage(event) {
   textImage.innerText = event.target.value;
-});
+}
 
-inputMemeImage.addEventListener('input', (event) => {
-  const newImage = document.getElementById('meme-image');
+function addImageOnContainer(event) {
   const imageURL = URL.createObjectURL(event.target.files[0]);
   newImage.setAttribute('src', imageURL);
-});
+}
 
-fireButton.addEventListener('click', () => {
-  imageContainer.style.border = '3px dashed red';
-});
+function changeBorder(event) {
+  const borderOptions = {
+    fire: '3px dashed red',
+    water: '5px double blue',
+    earth: '6px groove green',
+  };
+  imageContainer.style.border = borderOptions[event.target.id];
+}
 
-waterButton.addEventListener('click', () => {
-  imageContainer.style.border = '5px double blue';
-});
+function changeImage(event) {
+  const imageOptions = {
+    'meme-1': './imgs/meme1.png',
+    'meme-2': './imgs/meme2.png',
+    'meme-3': './imgs/meme3.png',
+    'meme-4': './imgs/meme4.png',
+  };
+  newImage.setAttribute('src', imageOptions[event.target.id]);
+}
 
-earthButton.addEventListener('click', () => {
-  imageContainer.style.border = '6px groove green';
-});
+function inicializaInteraction() {
+  inputText.addEventListener('input', addTextOnImage);
 
-meme1.addEventListener('click', () => {
-  const newImage = document.getElementById('meme-image');
-  newImage.setAttribute('src', './imgs/meme1.png');
-});
+  inputMemeImage.addEventListener('input', addImageOnContainer);
 
-meme2.addEventListener('click', () => {
-  const newImage = document.getElementById('meme-image');
-  newImage.setAttribute('src', './imgs/meme2.png');
-});
+  buttonContainer.addEventListener('click', changeBorder);
 
-meme3.addEventListener('click', () => {
-  const newImage = document.getElementById('meme-image');
-  newImage.setAttribute('src', './imgs/meme3.png');
-});
+  imagesContainer.addEventListener('click', changeImage);
+}
 
-meme4.addEventListener('click', () => {
-  const newImage = document.getElementById('meme-image');
-  newImage.setAttribute('src', './imgs/meme4.png');
-});
+inicializaInteraction();
