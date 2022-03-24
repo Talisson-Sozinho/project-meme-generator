@@ -11,8 +11,8 @@ body {
 #meme-image-container {
   margin-top: 1em;
   margin-left: 1em;
-  width: 30em;
-  height: 30em;
+  width: 25em;
+  height: 25em;
   display: inline-block;
   line-height: 0;
   border: 1px solid black;
@@ -67,4 +67,15 @@ body {
 
 #fire {
   background-color: red;
+}
+
+#memes-options-container {
+  margin-left: 2em;
+}
+
+#memes-options-container img {
+  height: 4em;
+  width: 4em;
+  margin-left: 1em;
+  margin-top: 1em;
 }

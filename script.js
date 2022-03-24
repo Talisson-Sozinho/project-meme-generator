@@ -5,6 +5,10 @@ const imageContainer = document.getElementById('meme-image-container');
 const fireButton = document.getElementById('fire');
 const waterButton = document.getElementById('water');
 const earthButton = document.getElementById('earth');
+const meme1 = document.getElementById('meme-1');
+const meme2 = document.getElementById('meme-2');
+const meme3 = document.getElementById('meme-3');
+const meme4 = document.getElementById('meme-4');
 
 inputText.addEventListener('input', (event) => {
   textImage.innerText = event.target.value;
@@ -26,4 +30,24 @@ waterButton.addEventListener('click', () => {
 
 earthButton.addEventListener('click', () => {
   imageContainer.style.border = '6px groove green';
+});
+
+meme1.addEventListener('click', () => {
+  const newImage = document.getElementById('meme-image');
+  newImage.setAttribute('src', './imgs/meme1.png');
+});
+
+meme2.addEventListener('click', () => {
+  const newImage = document.getElementById('meme-image');
+  newImage.setAttribute('src', './imgs/meme2.png');
+});
+
+meme3.addEventListener('click', () => {
+  const newImage = document.getElementById('meme-image');
+  newImage.setAttribute('src', './imgs/meme3.png');
+});
+
+meme4.addEventListener('click', () => {
+  const newImage = document.getElementById('meme-image');
+  newImage.setAttribute('src', './imgs/meme4.png');
 });
