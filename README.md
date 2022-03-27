@@ -2,8 +2,6 @@
   Projeto feito ao final do bloco 5 no curso da [Trybe](https://www.betrybe.com/), para consolidar meus
   conhecimentos adquirido durante o bloco.
 
-# Resultado visual
-
 <img src='https://user-images.githubusercontent.com/79944385/160266586-36e92fbf-0419-4a16-a201-4773ef6c09a0.gif'>
 
 # Avaliação feita pela Trybe
